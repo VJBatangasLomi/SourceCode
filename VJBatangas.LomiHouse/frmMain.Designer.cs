@@ -37,6 +37,10 @@
             this.miItemWithdrawal = new System.Windows.Forms.ToolStripMenuItem();
             this.miInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministration = new System.Windows.Forms.ToolStripMenuItem();
+            this.miManageBranch = new System.Windows.Forms.ToolStripMenuItem();
+            this.miManageCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.miManageEmployee = new System.Windows.Forms.ToolStripMenuItem();
+            this.miManageInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +51,7 @@
             this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslWelcome = new System.Windows.Forms.ToolStripStatusLabel();
             this.tClock = new System.Windows.Forms.Timer(this.components);
-            this.miManageBranch = new System.Windows.Forms.ToolStripMenuItem();
-            this.miManageCategory = new System.Windows.Forms.ToolStripMenuItem();
-            this.miManageEmployee = new System.Windows.Forms.ToolStripMenuItem();
-            this.miManageInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.tcWindowTab = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.ssStatus.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,40 @@
             this.miAdministration.Size = new System.Drawing.Size(98, 20);
             this.miAdministration.Text = "&Administration";
             // 
+            // miManageBranch
+            // 
+            this.miManageBranch.Image = global::VJBatangas.LomiHouse.Properties.Resources.branch;
+            this.miManageBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.miManageBranch.Name = "miManageBranch";
+            this.miManageBranch.Size = new System.Drawing.Size(172, 22);
+            this.miManageBranch.Text = "Manage Branch";
+            this.miManageBranch.Click += new System.EventHandler(this.miManageBranch_Click);
+            // 
+            // miManageCategory
+            // 
+            this.miManageCategory.Image = global::VJBatangas.LomiHouse.Properties.Resources.category;
+            this.miManageCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.miManageCategory.Name = "miManageCategory";
+            this.miManageCategory.Size = new System.Drawing.Size(172, 22);
+            this.miManageCategory.Text = "Manage Category";
+            // 
+            // miManageEmployee
+            // 
+            this.miManageEmployee.Image = global::VJBatangas.LomiHouse.Properties.Resources.employee;
+            this.miManageEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.miManageEmployee.Name = "miManageEmployee";
+            this.miManageEmployee.Size = new System.Drawing.Size(172, 22);
+            this.miManageEmployee.Text = "Manage Employee";
+            // 
+            // miManageInventory
+            // 
+            this.miManageInventory.Image = global::VJBatangas.LomiHouse.Properties.Resources.inventory;
+            this.miManageInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.miManageInventory.Name = "miManageInventory";
+            this.miManageInventory.Size = new System.Drawing.Size(172, 22);
+            this.miManageInventory.Text = "Manage Inventory";
+            this.miManageInventory.Click += new System.EventHandler(this.miManageInventory_Click);
+            // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
@@ -141,6 +176,7 @@
             // 
             // ssStatus
             // 
+            this.ssStatus.BackColor = System.Drawing.Color.Gainsboro;
             this.ssStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ssStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslTime,
@@ -194,47 +230,25 @@
             this.tClock.Enabled = true;
             this.tClock.Tick += new System.EventHandler(this.tClock_Tick);
             // 
-            // miManageBranch
+            // tcWindowTab
             // 
-            this.miManageBranch.Image = global::VJBatangas.LomiHouse.Properties.Resources.branch;
-            this.miManageBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.miManageBranch.Name = "miManageBranch";
-            this.miManageBranch.Size = new System.Drawing.Size(172, 22);
-            this.miManageBranch.Text = "Manage Branch";
-            this.miManageBranch.Click += new System.EventHandler(this.miManageBranch_Click);
-            // 
-            // miManageCategory
-            // 
-            this.miManageCategory.Image = global::VJBatangas.LomiHouse.Properties.Resources.category;
-            this.miManageCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.miManageCategory.Name = "miManageCategory";
-            this.miManageCategory.Size = new System.Drawing.Size(172, 22);
-            this.miManageCategory.Text = "Manage Category";
-            // 
-            // miManageEmployee
-            // 
-            this.miManageEmployee.Image = global::VJBatangas.LomiHouse.Properties.Resources.employee;
-            this.miManageEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.miManageEmployee.Name = "miManageEmployee";
-            this.miManageEmployee.Size = new System.Drawing.Size(172, 22);
-            this.miManageEmployee.Text = "Manage Employee";
-            // 
-            // miManageInventory
-            // 
-            this.miManageInventory.Image = global::VJBatangas.LomiHouse.Properties.Resources.inventory;
-            this.miManageInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.miManageInventory.Name = "miManageInventory";
-            this.miManageInventory.Size = new System.Drawing.Size(172, 22);
-            this.miManageInventory.Text = "Manage Inventory";
-            this.miManageInventory.Click += new System.EventHandler(this.miManageInventory_Click);
+            this.tcWindowTab.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tcWindowTab.Location = new System.Drawing.Point(0, 376);
+            this.tcWindowTab.Name = "tcWindowTab";
+            this.tcWindowTab.SelectedIndex = 0;
+            this.tcWindowTab.Size = new System.Drawing.Size(962, 27);
+            this.tcWindowTab.TabIndex = 3;
+            this.tcWindowTab.Selected += new System.Windows.Forms.TabControlEventHandler(this.tcWindowTab_Selected);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = global::VJBatangas.LomiHouse.Properties.Resources.VJLogo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 425);
+            this.Controls.Add(this.tcWindowTab);
             this.Controls.Add(this.ssStatus);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -281,6 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem miManageBranch;
         private System.Windows.Forms.ToolStripMenuItem miManageEmployee;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.TabControl tcWindowTab;
     }
 }
 

@@ -77,7 +77,7 @@ namespace VJBatangas.LomiHouse
         private void miManageBranch_Click(object sender, EventArgs e)
         {
             
-            CloseCurrentChildForm();
+            //CloseCurrentChildForm();
 
             frmBranch frm = new frmBranch();
             frm.MdiParent = this;
@@ -86,13 +86,13 @@ namespace VJBatangas.LomiHouse
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.userinfo = this.userinfo;
             frm.Show();
-            
+            addTab("Branch");
         }        
 
         private void miManageInventory_Click(object sender, EventArgs e)
         {
 
-            CloseCurrentChildForm();
+            //CloseCurrentChildForm();
             frmInventory frm = new frmInventory();
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
@@ -100,7 +100,7 @@ namespace VJBatangas.LomiHouse
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.userinfo = this.userinfo;
             frm.Show();
-
+            addTab("Inventory");
         }
 
         private void tClock_Tick(object sender, EventArgs e)
@@ -152,52 +152,95 @@ namespace VJBatangas.LomiHouse
             frm.Show();
         }
 
-        /*
-        private void Form1_MdiChildActivate(object sender, EventArgs e)
+        private void addTab(String title)
         {
-            if (this.ActiveMdiChild == null)
-                tabForms.Visible = false;
-            // If no any child form, hide tabControl 
+
+            TabPage tp = new TabPage(title);
+
+            if (this.tcWindowTab.TabCount == 0)
+            {
+
+                tp.Tag = this.ActiveMdiChild;
+                tp.Parent = tcWindowTab;
+                tcWindowTab.SelectedTab = tp;
+                
+            }
             else
             {
-                // Child form always maximized 
-                this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
+                bool hasCreated = false;
 
-                // If child form is new and no has tabPage, create new tabPage 
-                if (this.ActiveMdiChild.Tag == null)
+                for (int i = 0; i < this.tcWindowTab.TabCount; i++)
                 {
-                    // Add a tabPage to tabControl with child form caption 
-                    TabPage tp = new TabPage(this.ActiveMdiChild.Text);
+                    if (tcWindowTab.TabPages[i].Text.Contains(title))
+                    {
+                        hasCreated = true;  
+                    }
+                }
+
+                if (hasCreated)
+                {
+                    tcWindowTab.SelectedTab = tp;
+                } else
+                {
                     tp.Tag = this.ActiveMdiChild;
-                    tp.Parent = tabForms;
-                    tabForms.SelectedTab = tp;
-
-                    this.ActiveMdiChild.Tag = tp;
-                    this.ActiveMdiChild.FormClosed += new FormClosedEventHandler(ActiveMdiChild_FormClosed);
+                    tp.Parent = tcWindowTab;
+                    tcWindowTab.SelectedTab = tp;
                 }
-                else
-                {
-                    //for (int i = 0; i < this.tabForms.TabCount; i++)
-                    //{
-                    //    if (tabForms.TabPages.Contains(this.ActivateMdiChild.Text))
-                    //    {
-
-                    //    }
-                    //}
-                }
-
-                if (!tabForms.Visible)
-                {
-                    tabForms.Visible = true;
-                }
-
             }
+            
+           
         }
 
-        private void ActiveMdiChild_FormClosed(object sender, FormClosedEventArgs e)
+        private void tcWindowTab_Selected(object sender, TabControlEventArgs e)
         {
-            ((sender as Form).Tag as TabPage).Dispose();
+           // this.tcWindowTab.SelectedTab.BackColor = Color.AliceBlue;
         }
-        */
+        /*
+private void Form1_MdiChildActivate(object sender, EventArgs e)
+{
+   if (this.ActiveMdiChild == null)
+       tabForms.Visible = false;
+   // If no any child form, hide tabControl 
+   else
+   {
+       // Child form always maximized 
+       this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
+
+       // If child form is new and no has tabPage, create new tabPage 
+       if (this.ActiveMdiChild.Tag == null)
+       {
+           // Add a tabPage to tabControl with child form caption 
+           TabPage tp = new TabPage(this.ActiveMdiChild.Text);
+           tp.Tag = this.ActiveMdiChild;
+           tp.Parent = tabForms;
+           tabForms.SelectedTab = tp;
+
+           this.ActiveMdiChild.Tag = tp;
+           this.ActiveMdiChild.FormClosed += new FormClosedEventHandler(ActiveMdiChild_FormClosed);
+       }
+       else
+       {
+           //for (int i = 0; i < this.tabForms.TabCount; i++)
+           //{
+           //    if (tabForms.TabPages.Contains(this.ActivateMdiChild.Text))
+           //    {
+
+           //    }
+           //}
+       }
+
+       if (!tabForms.Visible)
+       {
+           tabForms.Visible = true;
+       }
+
+   }
+}
+
+private void ActiveMdiChild_FormClosed(object sender, FormClosedEventArgs e)
+{
+   ((sender as Form).Tag as TabPage).Dispose();
+}
+*/
     }
 }

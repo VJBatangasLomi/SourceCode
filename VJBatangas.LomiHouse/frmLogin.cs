@@ -31,18 +31,6 @@ namespace VJBatangas.LomiHouse
         {
 
             ProcessLogin();
-            //frmLogin frml = new frmLogin();
-            //frml.Close();
-
-            ////frmMain frm = new frmMain();
-            ////frm.Show();
-
-            //this.Hide();
-            //frmMain frm = new frmMain();
-            //frm.Closed += (sender1, args) => this.Close();
-            //frm.Show();
-
-
         }
 
 
