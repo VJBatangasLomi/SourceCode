@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6FF8E73-3572-4ADC-84D1-AE8F6F972C54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VJBatangas.LomiHouse</RootNamespace>
+    <AssemblyName>VJBatangas.LomiHouse</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VJBatangas.LomiHouse.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\frmAddEditInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmAddEditInventory.Designer.cs">
+      <DependentUpon>frmAddEditInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmViewInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmViewInventory.Designer.cs">
+      <DependentUpon>frmViewInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\frmAddEditBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\frmAddEditBranch.Designer.cs">
+      <DependentUpon>frmAddEditBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\frmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\frmBranch.Designer.cs">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemWithdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemWithdrawal.Designer.cs">
+      <DependentUpon>frmItemWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchEmployee.Designer.cs">
+      <DependentUpon>frmSearchEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWithdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWithdrawal.Designer.cs">
+      <DependentUpon>frmWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmWithdrawalDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWithdrawalDetail.Designer.cs">
+      <DependentUpon>frmWithdrawalDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Administration\frmAddEditInventory.resx">
+      <DependentUpon>frmAddEditInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmViewInventory.resx">
+      <DependentUpon>frmViewInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\frmAddEditBranch.resx">
+      <DependentUpon>frmAddEditBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\frmBranch.resx">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemWithdrawal.resx">
+      <DependentUpon>frmItemWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchEmployee.resx">
+      <DependentUpon>frmSearchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWithdrawal.resx">
+      <DependentUpon>frmWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmWithdrawalDetail.resx">
+      <DependentUpon>frmWithdrawalDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VJBatangas.LomiHouse.Business\VJBatangas.LomiHouse.Business.csproj">
+      <Project>{4A3CC2D4-EB53-4640-93B6-2D0D9A43A0F8}</Project>
+      <Name>VJBatangas.LomiHouse.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VJBatangas.LomiHouse.Common\VJBatangas.LomiHouse.Common.csproj">
+      <Project>{8A5F5FC9-6CCE-413F-95E3-E9878DBDB176}</Project>
+      <Name>VJBatangas.LomiHouse.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VJBatangas.LomiHouse.Entity\VJBatangas.LomiHouse.Entity.csproj">
+      <Project>{93086D68-F8F8-4ADD-ADAA-5C9EE43911AE}</Project>
+      <Name>VJBatangas.LomiHouse.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\inventory.png" />
+    <None Include="Images\User-Interface-Close-Window-icon.png" />
+    <None Include="Images\red-cross-icon.png" />
+    <None Include="Images\file-info-icon.png" />
+    <None Include="Images\Add-icon.png" />
+    <None Include="Images\branch.png" />
+    <Content Include="Images\Button-Refresh-icon.png" />
+    <None Include="Images\edit-file-icon.png" />
+    <None Include="Images\delete-file-icon.png" />
+    <None Include="Images\employee.png" />
+    <None Include="Images\category.png" />
+    <Content Include="Images\Excel-icon.png" />
+    <Content Include="Images\favicon.ico" />
+    <None Include="Images\VJLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

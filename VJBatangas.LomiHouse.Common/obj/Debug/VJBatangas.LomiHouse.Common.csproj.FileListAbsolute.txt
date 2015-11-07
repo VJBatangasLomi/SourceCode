@@ -1,0 +1,5 @@
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Common\bin\Debug\VJBatangas.LomiHouse.Common.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Common\bin\Debug\VJBatangas.LomiHouse.Common.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Common\obj\Debug\VJBatangas.LomiHouse.Common.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Common\obj\Debug\VJBatangas.LomiHouse.Common.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Common\obj\Debug\VJBatangas.LomiHouse.Common.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Business.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Business.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Common.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Data.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Entity.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Common.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Data.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\bin\Debug\VJBatangas.LomiHouse.Entity.pdb
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\obj\Debug\VJBatangas.LomiHouse.Business.csprojResolveAssemblyReference.cache
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\obj\Debug\VJBatangas.LomiHouse.Business.dll
+D:\Development\Project\VJBatangas.LomiHouse\VJBatangas.LomiHouse.Business\obj\Debug\VJBatangas.LomiHouse.Business.pdb

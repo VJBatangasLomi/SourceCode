@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VJLomiDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="VJLomiDBModelStoreContainer">
+    <EntitySet Name="Branch" EntityType="VJLomiDBModel.Store.Branch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="VJLomiDBModel.Store.Category" store:Type="Tables" store:Schema="dbo" store:Name="Category">
+      <DefiningQuery>SELECT 
+      [Category].[CategoryID] AS [CategoryID], 
+      [Category].[CategoryName] AS [CategoryName], 
+      [Category].[Description] AS [Description], 
+      [Category].[IsEnable] AS [IsEnable], 
+      [Category].[CreatedBy] AS [CreatedBy], 
+      [Category].[CreatedDate] AS [CreatedDate], 
+      [Category].[ModifiedBy] AS [ModifiedBy], 
+      [Category].[ModifiedDate] AS [ModifiedDate]
+      FROM [dbo].[Category] AS [Category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employee" EntityType="VJLomiDBModel.Store.Employee" store:Type="Tables" store:Schema="dbo" store:Name="Employee">
+      <DefiningQuery>SELECT 
+      [Employee].[ID] AS [ID], 
+      [Employee].[FirstName] AS [FirstName], 
+      [Employee].[MiddleName] AS [MiddleName], 
+      [Employee].[LastName] AS [LastName], 
+      [Employee].[RoleID] AS [RoleID], 
+      [Employee].[BranchID] AS [BranchID], 
+      [Employee].[Status] AS [Status], 
+      [Employee].[CreatedBy] AS [CreatedBy], 
+      [Employee].[CreatedDate] AS [CreatedDate], 
+      [Employee].[ModifiedBy] AS [ModifiedBy], 
+      [Employee].[ModifiedDate] AS [ModifiedDate]
+      FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ErrorLog" EntityType="VJLomiDBModel.Store.ErrorLog" store:Type="Tables" store:Schema="dbo" store:Name="ErrorLog">
+      <DefiningQuery>SELECT 
+      [ErrorLog].[ErrorID] AS [ErrorID], 
+      [ErrorLog].[Module] AS [Module], 
+      [ErrorLog].[ClassMethod] AS [ClassMethod], 
+      [ErrorLog].[Message] AS [Message], 
+      [ErrorLog].[CreatedDate] AS [CreatedDate]
+      FROM [dbo].[ErrorLog] AS [ErrorLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Inventory" EntityType="VJLomiDBModel.Store.Inventory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="VJLomiDBModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="VJLomiDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BranchName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'VJLomiDB.dbo.Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsEnable" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'VJLomiDB.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MiddleName" Type="nchar" MaxLength="10" />
+    <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'VJLomiDB.dbo.ErrorLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorID" />
+      <PropertyRef Name="Module" />
+      <PropertyRef Name="ClassMethod" />
+      <PropertyRef Name="Message" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="ErrorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Module" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClassMethod" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Message" Type="varchar(max)" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="CategoryId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Quantity" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Price" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Status" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remarks" Type="nchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmpID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+</Schema>
